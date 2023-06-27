@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+.upper-content{
+    display: flex;
+    flex-direction: column;
+}
+.content{
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+.example-button-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.content-input{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 350px;
+}

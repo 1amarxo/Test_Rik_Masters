@@ -1,0 +1,5 @@
+.mat-mdc-paginator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}

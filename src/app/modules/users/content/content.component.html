@@ -1,0 +1,113 @@
+<div class="container">
+    <div class="upper-content">
+        <div>
+            
+            <button mat-button><mat-icon>arrow_left_alt</mat-icon>Назад</button>
+        </div>
+        <div style="padding:20px;">
+            <span style="font-size: 24px;">Натройка учетных записей сотрудников контрагента</span>
+        </div>
+        <div class="example-button-row">
+            <div > 
+                <button mat-raised-button color="warn" style="margin: 10px;">Добавить</button>
+                <button mat-raised-button color="warn" style="margin: 10px;">Разблокировать</button>
+                <button mat-raised-button color="warn" style="margin: 10px;">Заблокировать</button>
+            </div>
+            <div>
+                <button mat-raised-button color="warn">Фильтр</button>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div style="padding:20px;">
+            <span style="font-size: 24px;">Фильтр</span>
+        </div>
+        <div [style]="'display:flex; flex-direction:row; justify-content:space-around;'">
+            <div class="content-input">
+                <span>Логин</span>
+                <mat-form-field>
+                    <mat-label>Enter your email</mat-label>
+                    <input matInput [formControl]="email" required>
+                    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="content-input">
+                <span>Телефон</span>
+                <mat-form-field>
+                    <mat-label>Enter your email</mat-label>
+                    <input matInput placeholder="pat@example.com" [formControl]="email" required>
+                    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="content-input">
+                <span>Дата создания</span>
+                <mat-form-field class="example-form-field">
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="datepicker">
+                    <mat-datepicker-toggle matIconSuffix [for]="datepicker"></mat-datepicker-toggle>
+                    <mat-datepicker #datepicker>
+                      <mat-datepicker-actions>
+                        <button mat-button matDatepickerCancel>Cancel</button>
+                        <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+                      </mat-datepicker-actions>
+                    </mat-datepicker>
+                  </mat-form-field>
+            </div>
+            <div class="content-input">
+                <span>Статус</span>
+                <mat-form-field>
+                    <mat-label>Color</mat-label>
+                    <mat-select>
+                      <mat-option value="primary">Аквтивен</mat-option>
+                      <mat-option value="accent">Заблокирован</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+        </div>
+        <div [style]="'display:flex; flex-direction:row; justify-content:space-around;'">
+            <div class="content-input">
+                <span>E-mail</span>
+                <mat-form-field>
+                    <mat-label>Enter your email</mat-label>
+                    <input matInput placeholder="pat@example.com" [formControl]="email" required>
+                    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="content-input">
+                <span>Роль</span>
+                <mat-form-field>
+                    <mat-label>Color</mat-label>
+                    <mat-select>
+                      <mat-option value="primary">Пользователь</mat-option>
+                      <mat-option value="accent">Администратор</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="content-input" >
+                <span>Дата изменения</span>
+                <mat-form-field class="example-form-field">
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="datepicker2">
+                    <mat-datepicker-toggle matIconSuffix [for]="datepicker2"></mat-datepicker-toggle>
+                    <mat-datepicker #datepicker2>
+                      <mat-datepicker-actions>
+                        <button mat-button matDatepickerCancel>Cancel</button>
+                        <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+                      </mat-datepicker-actions>
+                    </mat-datepicker>
+                  </mat-form-field>
+            </div>
+            <div class="content-input"></div>
+        </div>
+        <div style="margin: 10px;"> 
+            <button mat-raised-button color="warn" style="margin: 10px;">Применить</button>
+            <button mat-raised-button color="warn" style="margin: 10px;">Отмена</button>
+            <button mat-raised-button color="warn" style="margin: 10px;">Сбросить</button>
+        </div>
+      
+    </div>
+    <div class="content">
+        <app-table></app-table>
+    </div>
+</div>
